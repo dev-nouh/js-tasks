@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="w-75 mx-auto py-4">
+      <h3 class="fw-bolder py-2">Management System</h3>
+      <label for="productNameInput">ProductName :</label>
+      <input
+        type="text"
+        oninput="validateProdactsName()"
+        class="form-control mb-2"
+        id="productNameInput"
+      />
+
+      <label for="productCategoryInput">ProductCategory :</label>
+      <input type="text" class="form-control mb-2" id="productCategoryInput" />
+
+      <label for="productPriceInput">ProductPrice :</label>
+      <input
+        type="text"
+        oninput="validateProdactsPrice()"
+        class="form-control mb-2"
+        id="productPriceInput"
+      />
+
+      <label for="productDescriptionInput">productDescription :</label>
+      <textarea
+        type="text"
+        class="form-control mb-2"
+        id="productDescriptionInput"
+      ></textarea>
+      <button
+        id="addBtn"
+        onclick="addProduct()"
+        class="btn btn-outline-info py-2 my-1"
+      >
+        Add Product
+      </button>
+      <button
+        onclick="productAfterUpdate()"
+        id="updateBtn"
+        class="d-none btn btn-outline-warning py-2 my-1"
+      >
+        Update Product
+      </button>
+    </div>
+    <div class="w-75 mx-auto py-2 my-1">
+      <label for="search">Search :</label>
+      <input
+        oninput="searchProducts(this.value)"
+        type="text"
+        class="form-control py-2 my-1"
+        placeholder="Search by name"
+        id="search"
+      />
+    </div>
+    <table class="table w-75 mx-auto table-striped">
+      <thead>
+        <th>index</th>
+        <th>productName</th>
+        <th>productCategory</th>
+        <th>productPrice</th>
+        <th>productDescription</th>
+      </thead>
+      <tbody id="tableData">
+        <!-- <tr>
+          <td>0</td>
+          <td>iphone</td>
+          <td>mobile</td>
+          <td>200</td>
+          <td>good</td>
+          <td><button class="btn btn-warning bt-sm">update</button></td>
+          <td><button class="btn btn-danger bt-sm">delete</button></td>
+        </tr> -->
+      </tbody>
+    </table>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
